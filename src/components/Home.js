@@ -14,10 +14,10 @@ const HomeStyles = styled.div`
     justify-content: center;
     text-align: center;
   }
-  .home__left {
-    flex: 0.5;
-  }
   .home__right {
+    flex: 0.3;
+  }
+  .home__left {
     flex: 0.27;
     margin: 3rem;
     margin-right: 5rem;
@@ -36,14 +36,14 @@ const HomeStyles = styled.div`
     margin-top: 2rem;
   }
   @media only screen and (max-width: 950px) {
-    .home__left {
+    .home__right {
       flex: 4;
     }
-    .home__right {
-      flex: 3;
+    .home__left {
+      flex: 2.5;
     }
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 700px) {
     .container {
       flex-direction: column;
       text-align: center;
@@ -52,7 +52,10 @@ const HomeStyles = styled.div`
     .home__right {
       width: 100%;
     }
-    .ahome_right {
+    .home__left {
+      flex: 0.3;
+    }
+    .ahome_left {
       margin-top: 3rem;
     }
     .article-title {
@@ -78,10 +81,10 @@ export default function Home() {
   return (
     <HomeStyles>
       <div className='container'>
-        <div className='home__right'>
+        <div className='home__left'>
           <img className='homeImg' src={Kavin} alt='Img' />
         </div>
-        <div className='home__left'>
+        <div className='home__right'>
           <ArticleTitle
             heading={`Hi, I'm Kavin`}
             subheading='Software Developer'
