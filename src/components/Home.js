@@ -79,7 +79,7 @@ const HomeStyles = styled.div`
 
 export default function Home() {
   return (
-    <HomeStyles>
+    <HomeStyles id='home'>
       <div className='container'>
         <div className='home__left'>
           <img className='homeImg' src={Kavin} alt='Img' />

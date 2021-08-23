@@ -3,6 +3,7 @@ import { ReactDOM } from 'react-dom';
 import styled from 'styled-components';
 import { MdClose, MdMenu } from 'react-icons/md';
 import Home from './Home';
+import AboutSec from './AboutSection';
 import {
   Link,
   DirectLink,
@@ -12,6 +13,7 @@ import {
   scrollSpy,
   scroller,
 } from 'react-scroll';
+import AboutSection from './AboutSection';
 
 const NavStyles = styled.nav`
   position: fixed;
@@ -21,6 +23,7 @@ const NavStyles = styled.nav`
   width: 100%;
   padding: 1rem 0;
   background: var(--dark-bg);
+  border-bottom: 1px solid var(--gray-1);
   ul {
     max-width: 1200px;
     margin: 0 auto;
@@ -120,10 +123,14 @@ export default function Navigation(props) {
         </div>
 
         <li>
-          <Link>Home</Link>
+          <Link activeClass='active' to='home' spy={true} smooth={true}>
+            Home
+          </Link>
         </li>
         <li>
-          <Link>About</Link>
+          <Link to='about' spy={true} smooth={true}>
+            About
+          </Link>
         </li>
         <li>
           <Link>Skills</Link>
@@ -135,7 +142,6 @@ export default function Navigation(props) {
           <Link>Contact</Link>
         </li>
       </ul>
-      <Home />
     </NavStyles>
   );
 }
