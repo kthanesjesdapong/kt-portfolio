@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 :root{
   --dark-bg: #15202B;
@@ -20,6 +21,7 @@ html{
   font-size: 10px;
   font-family: 'SF-Regular';
   background-color: var(--dark-bg);
+  scroll-behavior: smooth;
 }
 ul,li{
   list-style: none;

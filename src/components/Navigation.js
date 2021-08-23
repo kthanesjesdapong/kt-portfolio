@@ -23,7 +23,7 @@ const NavStyles = styled.nav`
   width: 100%;
   padding: 1rem 0;
   background: var(--dark-bg);
-  border-bottom: 1px solid var(--gray-1);
+  box-shadow: 0 -1px 4px rgb(0 0 0 / 15%);
   ul {
     max-width: 1200px;
     margin: 0 auto;
@@ -45,6 +45,10 @@ const NavStyles = styled.nav`
       color: var(--gray-1);
       outline: none;
     }
+    a:hover {
+      color: var(--white);
+    }
+
     .active {
       color: var(--white);
     }
@@ -101,16 +105,20 @@ const NavStyles = styled.nav`
 `;
 export default function Navigation(props) {
   const [showNav, setShowNav] = useState(false);
-  const scrollToSection = () => {
-    console.log('home');
-    scroller.scrollTo('Home', {
-      duration: 800,
-      delay: 0,
-      smooth: 'easeInOutQuart',
-    });
-  };
+
+  const linkAction = () => {};
+
   return (
     <NavStyles>
+      <div
+        className='mobile-menu-icon'
+        onClick={() => setShowNav(!showNav)}
+        role='button'
+        onKeyDown={() => setShowNav(!showNav)}
+        tabIndex={0}
+      >
+        <MdMenu />
+      </div>
       <ul className={!showNav ? 'navItems hide-item' : 'navItems'}>
         <div
           className='closeNavIcon'
@@ -123,12 +131,28 @@ export default function Navigation(props) {
         </div>
 
         <li>
-          <Link activeClass='active' to='home' spy={true} smooth={true}>
+          <Link
+            to='home'
+            spy={true}
+            smooth={true}
+            onClick={() => setShowNav(!showNav)}
+            role='button'
+            onKeyDown={() => setShowNav(!showNav)}
+            tabIndex={0}
+          >
             Home
           </Link>
         </li>
         <li>
-          <Link to='about' spy={true} smooth={true}>
+          <Link
+            to='about'
+            spy={true}
+            smooth={true}
+            onClick={() => setShowNav(!showNav)}
+            role='button'
+            onKeyDown={() => setShowNav(!showNav)}
+            tabIndex={0}
+          >
             About
           </Link>
         </li>
