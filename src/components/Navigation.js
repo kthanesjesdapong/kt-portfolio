@@ -44,6 +44,7 @@ const NavStyles = styled.nav`
       font-size: 2rem;
       color: var(--gray-1);
       outline: none;
+      cursor: pointer;
     }
     a:hover {
       color: var(--white);
@@ -157,7 +158,17 @@ export default function Navigation(props) {
           </Link>
         </li>
         <li>
-          <Link>Skills</Link>
+          <Link
+            to='skills'
+            spy={true}
+            smooth={true}
+            onClick={() => setShowNav(!showNav)}
+            role='button'
+            onKeyDown={() => setShowNav(!showNav)}
+            tabIndex={0}
+          >
+            Skills
+          </Link>
         </li>
         <li>
           <Link>Projects</Link>
