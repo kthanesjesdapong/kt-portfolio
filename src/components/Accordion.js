@@ -1,48 +1,132 @@
-import { prop } from 'dom7';
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import skills from '../assets/data/skills';
 
 const AccordingStyles = styled.div`
   .container {
-    width: 100%;
-    max-width: 480px;
-    margin: auto;
+    display: flex;
+    justify-content: center;
   }
-  .accordion {
-    width: 100%;
-    max-width: 540px;
-    margin: 18px auto;
-    color: white;
+  body {
+    font-family: 'SF-Regular';
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
   }
-  .accordion__heading {
-    background-color: var(--deep-blue);
-    padding: 14px 0;
+
+  ul {
+    display: flex;
+    min-height: 30vh;
+    max-height: 30vh;
+    max-width: 200vh;
+    margin: 10px 100px;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    border-radius: 2px solid white;
   }
-  .accordion__heading p {
-    letter-spacing: 1.2px;
-    font-weight: 500px;
-  }
-  .accordion__heading span {
+
+  li {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    padding: 20px;
+    background: #1d2d3c;
     cursor: pointer;
+    transition: all 0.5s ease;
+    border: 2px solid #15202b;
+
+    &:hover {
+      background: #15202b;
+    }
+
+    &.active {
+      flex: 5;
+      background: #253a4d;
+      cursor: default;
+      font-size: 16px;
+
+      h2 {
+        color: white;
+        font-size: 24px;
+      }
+
+      .section-content {
+        flex: 5;
+        opacity: 1;
+        transform: scaleX(1);
+        color: var(--gray-1);
+      }
+    }
+
+    .section-title {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: white;
+
+      h2 {
+        margin: 0;
+        transform: rotate(-90deg);
+        white-space: nowrap;
+      }
+    }
+
+    .section-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+      transition: all 0.25s 0.1s ease-out;
+    }
   }
 `;
 
-export default function Accordion(props) {
+export default function Accordion() {
+  const [cur_skill, setCurSkill] = useState('');
   return (
     <AccordingStyles>
-      <div className='according'>
-        <div className='accordion__heading'>
-          <div className='container'>
-            <p>props.title</p>
-            <span>X</span>
-          </div>
-        </div>
-        <div className='accordion__content'>
-          <div className='container'>
-            <p>{props.content}</p>
-          </div>
-        </div>
+      <div className='container'>
+        <ul>
+          {skills.map((skill, idx) => {
+            return (
+              // <li onClick={handleClick} className={isActive} key={skill.id}>
+              <li
+                onClick={() => setCurSkill(skill.level)}
+                className={skill.level === cur_skill ? 'active' : ''}
+                key={idx}
+              >
+                <div className='section-title'>
+                  <h2>{skill.level}</h2>
+                </div>
+                <div className='section-content'>
+                  {skill.name.map((n) => {
+                    return (
+                      <p>
+                        {n}
+                        <br></br>
+                      </p>
+                    );
+                  })}
+                  {/* <p>
+                    {skill.map (s => {
+
+                    })}
+                    <br></br>
+                  </p> */}
+                </div>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </AccordingStyles>
   );
