@@ -1,19 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { ReactDOM } from 'react-dom';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { MdClose, MdMenu } from 'react-icons/md';
-import Home from './Home';
-import AboutSec from './AboutSection';
-import {
-  Link,
-  DirectLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from 'react-scroll';
-import AboutSection from './AboutSection';
+
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 const NavStyles = styled.nav`
   position: fixed;
@@ -171,7 +160,17 @@ export default function Navigation(props) {
           </Link>
         </li>
         <li>
-          <Link>Projects</Link>
+          <Link
+            to='projects'
+            spy={true}
+            smooth={true}
+            onClick={() => setShowNav(!showNav)}
+            role='button'
+            onKeyDown={() => setShowNav(!showNav)}
+            tabIndex={0}
+          >
+            Projects
+          </Link>
         </li>
         <li>
           <Link>Contact</Link>

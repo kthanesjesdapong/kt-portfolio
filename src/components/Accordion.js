@@ -98,7 +98,6 @@ export default function Accordion() {
         <ul>
           {skills.map((skill, idx) => {
             return (
-              // <li onClick={handleClick} className={isActive} key={skill.id}>
               <li
                 onClick={() => setCurSkill(skill.level)}
                 className={skill.level === cur_skill ? 'active' : ''}
@@ -116,12 +115,6 @@ export default function Accordion() {
                       </p>
                     );
                   })}
-                  {/* <p>
-                    {skill.map (s => {
-
-                    })}
-                    <br></br>
-                  </p> */}
                 </div>
               </li>
             );

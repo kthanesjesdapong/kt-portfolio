@@ -19,11 +19,9 @@ const skills = [
     name: [
       `CSS`,
       `Expo`,
-      `TensorFlow.Js`,
       `AWS: Amplify`,
       `Cognito`,
       `DynamoDb`,
-      `Lambda`,
       `S3`,
       `Stripe`,
       `HTML 5`,

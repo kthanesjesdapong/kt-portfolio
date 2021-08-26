@@ -1,6 +1,5 @@
 import React from 'react';
 import SectionTitle from './SectionTitle';
-import UilReact from '@iconscout/react-unicons/icons/uil-react';
 import Accordion from './Accordion';
 import styled from 'styled-components';
 
