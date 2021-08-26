@@ -1,7 +1,6 @@
 import React from 'react';
 import Kavin from '../assets/images/home__img.png';
 import styled from 'styled-components';
-import SectionTitle from './SectionTitle';
 import Button from './Button';
 import PText from './PText';
 import ArticleTitle from './ArticleTitle';

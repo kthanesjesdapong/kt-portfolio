@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import SectionTitle from './SectionTitle';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 
 export default function Projects() {
   return (

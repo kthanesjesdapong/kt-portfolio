@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from './Button';
 import PText from './PText';
-import SectionTitle from './SectionTitle';
 import AboutImg from '../assets/images/AboutMePic.png';
 import AboutMeTitle from '../components/AboutMeTitle';
 

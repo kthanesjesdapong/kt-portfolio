@@ -96,8 +96,6 @@ const NavStyles = styled.nav`
 export default function Navigation(props) {
   const [showNav, setShowNav] = useState(false);
 
-  const linkAction = () => {};
-
   return (
     <NavStyles>
       <div
