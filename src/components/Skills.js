@@ -13,9 +13,13 @@ const SkillsStyles = styled.div`
 
 export default function Skills() {
   return (
-    <SkillsStyles>
-      <div className='container' id='skills'>
-        <SectionTitle heading='Skills' subheading='Technical Skills' />
+    <SkillsStyles id='skills'>
+      <div className='container'>
+        <SectionTitle
+          heading='Skills'
+          subheading='Technical Skills'
+          id='skills'
+        />
         <Accordion />
       </div>
     </SkillsStyles>

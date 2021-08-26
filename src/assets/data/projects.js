@@ -9,7 +9,7 @@ const projects = [
     desc: 'An E-Commerce store that sells musical instruments, hosted on heroku; my first agile group project completed at Fullstack Academy.',
     img: GraceRocker,
     gh: `https://github.com/2103-team-css/grace-shopper`,
-    test: `https://dashboard.heroku.com/apps/grace-rocker-2103-test`,
+    link: `https://dashboard.heroku.com/apps/grace-rocker-2103-test`,
   },
   {
     id: uuidv4(),
@@ -17,7 +17,7 @@ const projects = [
     desc: `Fullstack mobile application akin to Pokemon GO! In this game, students are able to see instructors spawn in real-time on a map, and capture them in order to pit them against one another.
     `,
     img: PocketInstructor,
-    gh: ``,
+    link: `https://github.com/team-jupiter/pocket-instructors`,
   },
 ];
 
