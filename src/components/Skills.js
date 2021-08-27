@@ -9,6 +9,9 @@ const SkillsStyles = styled.div`
     justify-content: center;
     flex-direction: row;
   } */
+  .container {
+    margin-bottom: 100px;
+  }
 `;
 
 export default function Skills() {

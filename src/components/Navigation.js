@@ -171,7 +171,17 @@ export default function Navigation(props) {
           </Link>
         </li>
         <li>
-          <Link>Contact</Link>
+          <Link
+            to='contact'
+            spy={true}
+            smooth={true}
+            onClick={() => setShowNav(!showNav)}
+            role='button'
+            onKeyDown={() => setShowNav(!showNav)}
+            tabIndex={0}
+          >
+            Contact
+          </Link>
         </li>
       </ul>
     </NavStyles>
