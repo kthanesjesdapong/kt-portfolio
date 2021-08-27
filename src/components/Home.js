@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Kavin from '../assets/images/home__img.png';
 import styled from 'styled-components';
 import Button from './Button';
 import PText from './PText';
 import ArticleTitle from './ArticleTitle';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 const HomeStyles = styled.div`
   padding: 10rem 0;
@@ -80,6 +81,7 @@ const HomeStyles = styled.div`
 `;
 
 export default function Home() {
+  const [showNav, setShowNav] = useState(false);
   return (
     <HomeStyles id='home'>
       <div className='container'>
@@ -97,7 +99,17 @@ export default function Home() {
             complex dynamic problems!
           </PText>
           <div className='home__buttons'>
-            <Button btnText='Contact Me' btnLink='#' outline />
+            <Link
+              to='contact'
+              spy={true}
+              smooth={true}
+              onClick={() => setShowNav(!showNav)}
+              role='button'
+              onKeyDown={() => setShowNav(!showNav)}
+              tabIndex={0}
+            >
+              <Button btnText='Contact Me' btnLink='#' outline />
+            </Link>
           </div>
         </div>
       </div>

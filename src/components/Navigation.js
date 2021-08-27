@@ -93,7 +93,7 @@ const NavStyles = styled.nav`
     }
   }
 `;
-export default function Navigation(props) {
+export default function Navigation() {
   const [showNav, setShowNav] = useState(false);
 
   return (
