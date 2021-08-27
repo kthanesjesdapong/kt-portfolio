@@ -45,10 +45,20 @@ const AboutSectionStyles = styled.div`
   }
   @media only screen and (max-width: 950px) {
     .aboutSection__left {
-      flex: 1;
+      flex: 0.7;
+      margin-right: 15px;
     }
     .aboutSection__right {
-      flex: 0.6;
+      flex: 0.7;
+    }
+    img {
+      border-radius: 30px;
+      border: 1px solid var(--gray-1);
+      width: 80%;
+      height: auto;
+    }
+    img ::-moz-drag-over {
+      border-radius: 55px;
     }
   }
   @media only screen and (max-width: 768px) {
@@ -59,6 +69,9 @@ const AboutSectionStyles = styled.div`
     .aboutSection__left,
     .aboutSection__right {
       width: 100%;
+    }
+    img {
+      width: 50%;
     }
     .aboutSection__right {
       margin-top: 3rem;

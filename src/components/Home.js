@@ -60,6 +60,9 @@ const HomeStyles = styled.div`
     .article-title {
       text-align: center;
     }
+    img {
+      width: 50%;
+    }
     .para {
       margin: 0 auto;
       margin-top: 2rem;

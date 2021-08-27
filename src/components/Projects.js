@@ -9,45 +9,53 @@ import ProjectItems from './ProjectItems';
 SwiperCore.use([Navigation], [Pagination]);
 
 const ProjectItemsStyles = styled.div`
-  .portfolio__container {
-    overflow: initial;
+  .container {
+    width: 100%;
+    height: auto;
   }
-  .portfolio__content {
-    padding: 0 1.5rem;
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: var(--gray-1);
+    height: 50px;
+    width: 350px;
+    font-size: 2rem;
   }
-  .portfolio__img {
-    width: 256px;
-    border-radius: 0.5rem;
-    justify-self: center;
+  .swiper-container {
+    display: flex;
   }
-  .portfolio__title {
-    font-size: 1.5rem;
-    margin-bottom: 2.5rem;
-    margin-top: 1.2rem;
+  @media screen and (max-width: 1050px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      height: 50px;
+      width: 200px;
+    }
   }
-  .portfolio__description {
-    margin-bottom: 1.2rem;
-  }
-  .portfolio__button:hover .button__icon {
-    transform: translateX(2rem);
+
+  @media screen and (max-width: 840px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      height: 50px;
+      width: 100px;
+    }
   }
 `;
 
 export default function Projects() {
   return (
-    <div className='container' id='projects'>
-      <SectionTitle heading='Projects' subheading='Recent works' />
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-      >
-        <ProjectItemsStyles>
+    <ProjectItemsStyles>
+      <div className='container' id='projects'>
+        <SectionTitle heading='Projects' subheading='Recent works' />
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          loop={true}
+        >
           <div className='portfolio__container container'>
             {projects.map((project, idx) => {
               return (
-                <SwiperSlide key={project.id}>
+                <SwiperSlide key={project.id} className='swiper-arrows'>
                   <ProjectItems
                     title={project.name}
                     img={project.img}
@@ -58,8 +66,8 @@ export default function Projects() {
               );
             })}
           </div>
-        </ProjectItemsStyles>
-      </Swiper>
-    </div>
+        </Swiper>
+      </div>
+    </ProjectItemsStyles>
   );
 }

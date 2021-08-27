@@ -27,7 +27,7 @@ export default function Button({
 }) {
   return (
     <ButtonStyle outline={outline} className='button-wrapper'>
-      <a href='#' className='button' to={btnLink}>
+      <a href={btnLink} className='button' to={btnLink}>
         {btnText}
       </a>
     </ButtonStyle>
