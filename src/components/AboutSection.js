@@ -18,6 +18,7 @@ const AboutSectionStyles = styled.div`
     justify-content: flex-start;
     align-self: flex-start;
     flex: 0.4;
+    margin-right: 25px;
   }
   .aboutSection__right {
     flex: 0.3;
@@ -103,14 +104,15 @@ export default function AboutSection() {
         <div className='aboutSection__left'>
           <AboutMeTitle subheading='A little' heading='About Me' />
           <PText>
-            Priori to my journey into the realm of software development, I was a
-            combat medic attached to the Marine Corps. <br></br>I quickly came
-            to realize that the problems being solved within the Medical Field
-            weren’t ones that excited me. This led me to explore my other
-            passion, which was Technology. I quickly became enamored with coding
-            and enrolled myself into FullStack Academy’s BootCamp where I was
-            taught the PERN stack. I am currently for an opportunity to start my
-            new career within this industry.
+            Prior to my journey into the realm of software development, I was a
+            combat medic attached to the Marine Corps. <br className='tab'></br>
+            I quickly came to realize that the problems being solved within the
+            Medical Field weren’t ones that excited me.<br></br> This led me to
+            explore my other passion, which was Technology.<br></br> I became
+            enamored with coding and enrolled myself into FullStack Academy’s
+            BootCamp where I was taught the PERN stack. <br></br>I am currently
+            in search for an opportunity to start my new career within this
+            industry.
           </PText>
           <div className='aboutSection__buttons'>
             <DownloadButton
