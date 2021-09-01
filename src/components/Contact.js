@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import ContactInfoItem from './ContactInfoItem';
 import { MdPlace, MdEmail } from 'react-icons/md';
 import ContactForm from './ContactForm';
-
+import emailjs from 'emailjs-com';
 const ContactStyles = styled.div`
   padding: 10rem 0;
   .container {

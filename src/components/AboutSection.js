@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from './Button';
 import PText from './PText';
 import AboutImg from '../assets/images/AboutMePic.png';
 import AboutMeTitle from '../components/AboutMeTitle';
+import ktResume from '../assets/data/ktResume.pdf';
+import DownloadButton from './DownloadButton';
 
 const AboutSectionStyles = styled.div`
   padding: 10rem 0;
@@ -112,7 +113,11 @@ export default function AboutSection() {
             new career within this industry.
           </PText>
           <div className='aboutSection__buttons'>
-            <Button btnText='Download Resume' btnLink='#' />
+            <DownloadButton
+              btnText='Download Resume'
+              btnLink={ktResume}
+              download='KT-RESUME'
+            />
           </div>
         </div>
         <div className='aboutSection__right'>

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import emailjs from 'emailjs-com';
 
+const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } =
+  process.env;
 const FormStyle = styled.form`
   width: 100%;
   .form-group {
@@ -42,12 +45,33 @@ const FormStyle = styled.form`
 export default function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        REACT_APP_SERVICE_ID,
+        REACT_APP_TEMPLATE_ID,
+        e.target,
+        REACT_APP_USER_ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  }
   return (
-    <FormStyle>
+    <FormStyle onSubmit={sendEmail}>
       <div className='form-group'>
         <label htmlFor='name'>
-          Your Name
+          Name
           <input
             type='text'
             id='name'
@@ -59,7 +83,7 @@ export default function ContactForm() {
       </div>
       <div className='form-group'>
         <label htmlFor='email'>
-          Your Email
+          Email
           <input
             type='email'
             id='email'
@@ -70,8 +94,20 @@ export default function ContactForm() {
         </label>
       </div>
       <div className='form-group'>
+        <label htmlFor='subject'>
+          Subject
+          <input
+            type='text'
+            id='subject'
+            name='subject'
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+          />
+        </label>
+      </div>
+      <div className='form-group'>
         <label htmlFor='message'>
-          Your message
+          Message
           <textarea
             type='text'
             id='message'
@@ -81,7 +117,9 @@ export default function ContactForm() {
           />
         </label>
       </div>
-      <button type='submit'>Send</button>
+      <button type='submit' onSubmit={sendEmail}>
+        Send
+      </button>
     </FormStyle>
   );
 }

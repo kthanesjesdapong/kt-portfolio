@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import GraceRocker from '../images/GraceRocker.png';
-import PocketInstructor from '../images/PocketInstructor.png';
+import pocket from '../images/pocketInstructors.png';
 
 const projects = [
   {
@@ -16,7 +16,7 @@ const projects = [
     name: 'Pocket-Instructor',
     desc: `Fullstack mobile application akin to Pokemon GO! In this game, students are able to see instructors spawn in real-time on a map, and capture them in order to pit them against one another.
     `,
-    img: PocketInstructor,
+    img: pocket,
     link: `https://github.com/team-jupiter/pocket-instructors`,
   },
 ];
