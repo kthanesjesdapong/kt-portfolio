@@ -105,14 +105,14 @@ export default function AboutSection() {
           <AboutMeTitle subheading='A little' heading='About Me' />
           <PText>
             Prior to my journey into the realm of software development, I was a
-            combat medic attached to the Marine Corps. <br className='tab'></br>
-            I quickly came to realize that the problems being solved within the
-            Medical Field weren’t ones that excited me.<br></br> This led me to
-            explore my other passion, which was Technology.<br></br> I became
-            enamored with coding and enrolled myself into FullStack Academy’s
-            BootCamp where I was taught the PERN stack. <br></br>I am currently
-            in search for an opportunity to start my new career within this
-            industry.
+            combat medic attached to the Marine Corps. During my military
+            service, I came to realize that the problems being solved within the
+            Medical Field weren’t ones that excited me. This led me to explore
+            my other passion, which was Technology and so I taught myself how to
+            code. I quickly became enamored with coding. Shortly after I
+            enrolled myself into FullStack Academy’s BootCamp where I was taught
+            the PERN stack. I am currently in search of an opportunity to start
+            my new career within this industry.
           </PText>
           <div className='aboutSection__buttons'>
             <DownloadButton
