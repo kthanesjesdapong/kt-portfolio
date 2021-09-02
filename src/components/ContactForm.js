@@ -52,10 +52,10 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(
-        REACT_APP_SERVICE_ID,
-        REACT_APP_TEMPLATE_ID,
+        'service_uxss4sg',
+        'template_lf7jw0b',
         e.target,
-        REACT_APP_USER_ID
+        'user_YRYJeFMLCyP8S9TL22zHQ'
       )
       .then(
         (result) => {

@@ -98,6 +98,39 @@ const AccordingStyles = styled.div`
     ul {
       flex-shrink: 0.2;
     }
+    li {
+      flex: 0.5;
+      display: flex;
+      align-items: stretch;
+      padding: 2px;
+      background: #1d2d3c;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      border: 2px solid #15202b;
+
+      &:hover {
+        background: #15202b;
+      }
+
+      &.active {
+        flex: 5;
+        background: #253a4d;
+        cursor: default;
+        font-size: 12px;
+
+        h2 {
+          color: white;
+          font-size: 18px;
+        }
+
+        .section-content {
+          flex: 5;
+          opacity: 1;
+          transform: scaleX(1);
+          color: var(--gray-1);
+        }
+      }
+    }
   }
 `;
 
