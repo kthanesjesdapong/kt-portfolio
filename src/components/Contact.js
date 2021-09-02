@@ -40,6 +40,71 @@ const ContactStyles = styled.div`
     width: 100%;
     border-radius: 12px;
   }
+
+  @media only screen and (max-width: 1046px) {
+    .contactSection__wrapper::after {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 50%;
+      background-color: var(--gray-1);
+      left: 52%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .contactSection__wrapper::after {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 50%;
+      background-color: var(--gray-1);
+      left: 53%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @media only screen and (max-width: 972px) {
+    .contactSection__wrapper::after {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 50%;
+      background-color: var(--gray-1);
+      left: 55%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  @media only screen and (max-width: 945px) {
+    .contactSection__wrapper::after {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 50%;
+      background-color: var(--gray-1);
+      left: 55%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @media only screen and (max-width: 945px) {
+    .contactSection__wrapper::after {
+      position: absolute;
+      content: '';
+      width: 0px;
+      height: 50%;
+      background-color: var(--gray-1);
+      left: 55%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
   @media only screen and (max-width: 768px) {
     .contactSection__wrapper {
       flex-direction: column;

@@ -88,6 +88,17 @@ const AccordingStyles = styled.div`
       transition: all 0.25s 0.1s ease-out;
     }
   }
+
+  @media only screen and (max-width: 945px) {
+    ul {
+      flex-shrink: 0.5;
+    }
+  }
+  @media only screen and (max-width: 772px) {
+    ul {
+      flex-shrink: 0.2;
+    }
+  }
 `;
 
 export default function Accordion() {

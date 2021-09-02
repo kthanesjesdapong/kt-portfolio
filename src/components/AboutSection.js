@@ -102,7 +102,7 @@ export default function AboutSection() {
     <AboutSectionStyles>
       <div className='container' id='about'>
         <div className='aboutSection__left'>
-          <AboutMeTitle subheading='A little' heading='About Me' />
+          <AboutMeTitle subheading='' heading='About Me' />
           <PText>
             Prior to my journey into the realm of software development, I was a
             combat medic attached to the Marine Corps. During my military
