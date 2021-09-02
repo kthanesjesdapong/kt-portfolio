@@ -41,6 +41,21 @@ const ProjectItemsStyles = styled.div`
   .portfolio__button:hover .button__icon {
     transform: translateX(2rem);
   }
+  @media screen and (max-width: 375px) {
+    .portfolio__img {
+      width: 156px;
+      border-radius: 0rem;
+      justify-self: center;
+      align-items: center;
+      margin: 0 25px;
+      top: 50%;
+    }
+    .portfolio__content.grid {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
+  }
 `;
 
 export default function ProjectItems({

@@ -120,6 +120,26 @@ const ContactStyles = styled.div`
       padding: 4rem 2rem 2rem 2rem;
     }
   }
+
+  @media only screen and (max-width: 375px) {
+    .contactSection__wrapper {
+      flex-direction: column;
+    }
+    .contactSection__wrapper::after {
+      display: none;
+    }
+    .left,
+    .right {
+      width: 120%;
+      max-width: 100%;
+    }
+    p {
+      font-size: 12px;
+    }
+    .right {
+      padding: 4rem 2rem 2rem 2rem;
+    }
+  }
 `;
 
 export default function Contact() {

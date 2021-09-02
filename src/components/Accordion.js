@@ -116,11 +116,54 @@ const AccordingStyles = styled.div`
         flex: 5;
         background: #253a4d;
         cursor: default;
-        font-size: 12px;
+        font-size: 10px;
 
         h2 {
           color: white;
           font-size: 18px;
+        }
+
+        .section-content {
+          flex: 5;
+          opacity: 1;
+          transform: scaleX(1);
+          color: var(--gray-1);
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 375px) {
+    .container {
+      margin: 10px;
+      max-width: 375px;
+    }
+    ul {
+      flex-shrink: 0.2;
+      margin: 10px 0px;
+    }
+    li {
+      flex: 0.3;
+      display: flex;
+      align-items: stretch;
+      padding: 0px;
+      background: #1d2d3c;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      border: 2px solid #15202b;
+
+      &:hover {
+        background: #15202b;
+      }
+
+      &.active {
+        flex: 5;
+        background: #253a4d;
+        cursor: default;
+        font-size: 9px;
+
+        h2 {
+          color: white;
+          font-size: 14px;
         }
 
         .section-content {

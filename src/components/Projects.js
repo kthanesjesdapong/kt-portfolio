@@ -38,6 +38,13 @@ const ProjectItemsStyles = styled.div`
       width: 100px;
     }
   }
+  @media screen and (max-width: 375px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      height: 50px;
+      width: 7px;
+    }
+  }
 `;
 
 export default function Projects() {
