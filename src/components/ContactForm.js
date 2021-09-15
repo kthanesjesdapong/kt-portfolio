@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } =
   process.env;
@@ -40,6 +42,25 @@ const FormStyle = styled.form`
     border-radius: 8px;
     cursor: pointer;
   }
+  .Toastify__toast--warning {
+    background: #ffe8bc !important;
+  }
+  .Toastify__toast--error {
+    background: #fca7a9 !important;
+  }
+  .toastBody {
+    color: #10171d; /* #10171D */
+    font-size: 1rem !important;
+  }
+  .Toastify__toast-theme--light {
+    background: #1d2d3c;
+    color: var(--toastify-text-color-light);
+    font-family: 'SF-Regular';
+    font-size: 12px;
+  }
+  .toastProgress {
+    background: #bebebe !important;
+  }
 `;
 
 export default function ContactForm() {
@@ -47,6 +68,8 @@ export default function ContactForm() {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const notify = () =>
+    toast('Thanks so much for reaching out! I will reply as soon as I can!');
   function sendEmail(e) {
     e.preventDefault();
 
@@ -65,10 +88,19 @@ export default function ContactForm() {
           console.log(error.text);
         }
       );
+    setName('');
+    setEmail('');
+    setSubject('');
+    setMessage('');
+    notify();
     e.target.reset();
   }
   return (
     <FormStyle onSubmit={sendEmail}>
+      <ToastContainer
+        progressClassName='toastProgress'
+        bodyClassName='toastBody'
+      />
       <div className='form-group'>
         <label htmlFor='name'>
           Name
