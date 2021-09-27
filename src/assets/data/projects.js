@@ -9,7 +9,7 @@ const projects = [
     desc: 'An E-Commerce store that sells musical instruments, hosted on heroku; my first agile group project completed at Fullstack Academy.',
     img: GraceRocker,
     gh: `https://github.com/2103-team-css/grace-shopper`,
-    link: `https://dashboard.heroku.com/apps/grace-rocker-2103-test`,
+    link: `https://grace-rocker-2103-test.herokuapp.com/`,
   },
   {
     id: uuidv4(),

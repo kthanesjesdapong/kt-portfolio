@@ -135,21 +135,23 @@ const AccordingStyles = styled.div`
   @media only screen and (max-width: 375px) {
     .container {
       margin: 10px;
-      max-width: 375px;
+      max-width: 350px;
     }
     ul {
-      flex-shrink: 0.2;
-      margin: 10px 0px;
+      flex-shrink: 0.1;
+      margin: 5px 0px;
     }
     li {
       flex: 0.3;
+      flex-grow: 0.2;
       display: flex;
       align-items: stretch;
       padding: 0px;
+      margin: 0px;
       background: #1d2d3c;
       cursor: pointer;
       transition: all 0.5s ease;
-      border: 2px solid #15202b;
+      border: 1px solid #15202b;
 
       &:hover {
         background: #15202b;
@@ -163,11 +165,11 @@ const AccordingStyles = styled.div`
 
         h2 {
           color: white;
-          font-size: 14px;
+          font-size: 12px;
         }
 
         .section-content {
-          flex: 5;
+          flex: 4;
           opacity: 1;
           transform: scaleX(1);
           color: var(--gray-1);

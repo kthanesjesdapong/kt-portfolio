@@ -41,7 +41,7 @@ const ProjectItemsStyles = styled.div`
   @media screen and (max-width: 375px) {
     .swiper-button-next,
     .swiper-button-prev {
-      height: 50px;
+      height: 490px;
       width: 7px;
     }
   }
