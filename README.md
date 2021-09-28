@@ -1,6 +1,3 @@
-#  This is my portfolio site
-
-## 
 
 # Details
 This web-app was created using React and hosted on AWS Amplify.
