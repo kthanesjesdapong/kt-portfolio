@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import PText from './PText';
 import AboutImg from '../assets/images/AboutMePic.png';
 import AboutMeTitle from '../components/AboutMeTitle';
-import ktResume from '../assets/data/ktResume.pdf';
 import DownloadButton from './DownloadButton';
 
 const AboutSectionStyles = styled.div`
@@ -98,6 +97,9 @@ const AboutSectionStyles = styled.div`
 `;
 
 export default function AboutSection() {
+  const ktResume =
+    'https://drive.google.com/file/d/1Rsrv0WCcEE1aHu8m1j5hcU4nhF9wD7Xp/view?usp=sharing';
+
   return (
     <AboutSectionStyles>
       <div className='container' id='about'>
