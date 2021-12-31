@@ -106,7 +106,7 @@ export default function AboutSection() {
         <div className='aboutSection__left'>
           <AboutMeTitle subheading='' heading='About Me' />
           <PText>
-            Navy Combagt Medic Vertan turned Software Developer . I am passionate about bringing digital products to life through code! User experience, delivering aesthetically pleasing products, and writing clean accessible code matters to me.
+            Navy Combat Medic Vertan turned Software Developer . I am passionate about bringing digital products to life through code! User experience, delivering aesthetically pleasing products, and writing clean accessible code matters to me.
             I have a Certificate of Web Development from FullStack Academy's Immersive Program where I was taught the PERN stack in a highly collaborative setting.
             <br />
             <br />
