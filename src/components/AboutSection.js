@@ -106,15 +106,11 @@ export default function AboutSection() {
         <div className='aboutSection__left'>
           <AboutMeTitle subheading='' heading='About Me' />
           <PText>
-            Prior to my journey into the realm of software development, I was a
-            combat medic attached to the Marine Corps. During my military
-            service, I came to realize that the problems being solved within the
-            Medical Field weren’t ones that excited me. This led me to explore
-            my other passion, which was Technology and so I taught myself how to
-            code. I quickly became enamored with coding. Shortly after I
-            enrolled myself into FullStack Academy’s BootCamp where I was taught
-            the PERN stack. I am currently in search of an opportunity to start
-            my new career within this industry.
+            Navy Combagt Medic Vertan turned Software Developer . I am passionate about bringing digital products to life through code! User experience, delivering aesthetically pleasing products, and writing clean accessible code matters to me.
+            I have a Certificate of Web Development from FullStack Academy's Immersive Program where I was taught the PERN stack in a highly collaborative setting.
+            <br />
+            <br />
+            <br /> When I'm not coding you can find me lifting iron plates or walking my dog Almond!
           </PText>
           <div className='aboutSection__buttons'>
             <DownloadButton
