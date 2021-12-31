@@ -26,7 +26,7 @@ const projects = [
     desc: `Front-End Application that randomly selects restaurants for users per user's specification using Yelp's GraphQL API. 
     `,
     img: ssPickMe,
-    link: `https://github.com/team-jupiter/pocket-instructors`,
+    link: `https://github.com/kthanesjesdapong/pick-me`,
   }
 ];
 

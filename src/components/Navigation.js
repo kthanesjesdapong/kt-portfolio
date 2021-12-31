@@ -133,6 +133,19 @@ export default function Navigation() {
         </li>
         <li>
           <Link
+            to='projects'
+            spy={true}
+            smooth={true}
+            onClick={() => setShowNav(!showNav)}
+            role='button'
+            onKeyDown={() => setShowNav(!showNav)}
+            tabIndex={0}
+          >
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link
             to='about'
             spy={true}
             smooth={true}
@@ -157,19 +170,7 @@ export default function Navigation() {
             Skills
           </Link>
         </li>
-        <li>
-          <Link
-            to='projects'
-            spy={true}
-            smooth={true}
-            onClick={() => setShowNav(!showNav)}
-            role='button'
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
-          >
-            Projects
-          </Link>
-        </li>
+
         <li>
           <Link
             to='contact'

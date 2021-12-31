@@ -95,7 +95,7 @@ export default function Home() {
           ></ArticleTitle>
           <PText className='para'>
             I am a recent graduate of FullStack Academy's immersive program. I am
-            a software engineer that is specialized in front-end web development.
+            a software engineer that specializes in front-end web development.
           </PText>
           <div className='home__buttons'>
             <Link
