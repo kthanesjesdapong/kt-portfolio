@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 import ssPickMe from '../images/ssPickMe.png'
 import ssGraceRocker from '../images/ssGraceRocker.png'
 import ssPocketInstructor from '../images/ssPocketInstructor.png'
-import ComingSoon from '../images/ComingSoon.jpeg'
+import ComingSoon from '../images/ComingSoon.png'
 
 const projects = [
   {
@@ -35,7 +35,7 @@ const projects = [
     desc: `Currently working on a mobile application that tracks prices of Cryptocurrencies. 
     `,
     img: ComingSoon,
-    link: `https://github.com/kthanesjesdapong/pick-me`,
+    link: `/`,
   },
 ];
 

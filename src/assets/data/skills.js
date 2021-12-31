@@ -32,13 +32,9 @@ const skills = [
     level: 'Familiar:',
     name: [
       ` Babel`,
-      `Chai`,
       `Cloud Firestore`,
       `GraphQL`,
-      `Mocha`,
-      `MongoDB`,
       `React-Native`,
-      `Toastify`,
     ],
   },
 ];
