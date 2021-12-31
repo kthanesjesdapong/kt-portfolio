@@ -12,9 +12,10 @@ export default function Main() {
     <div>
       <Navigation />
       <Home />
+      <Projects />
       <AboutSection />
       <Skills />
-      <Projects />
+
       <Contact />
       <Footer />
     </div>

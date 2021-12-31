@@ -94,9 +94,8 @@ export default function Home() {
             subheading='Software Developer'
           ></ArticleTitle>
           <PText className='para'>
-            I am a recent graduate of FullStack Academy's immersive program. I
-            am highly motivated and I have a passion for learning and solving
-            complex dynamic problems!
+            I am a recent graduate of FullStack Academy's immersive program. I am
+            a software engineer that is specialized in front-end web development.
           </PText>
           <div className='home__buttons'>
             <Link

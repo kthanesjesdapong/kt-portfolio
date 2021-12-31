@@ -2,16 +2,25 @@ import React from 'react';
 import styled from 'styled-components';
 import SectionTitle from './SectionTitle';
 import projects from '../assets/data/projects';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination } from 'swiper';
+import PItem from './PItem';
 import 'swiper/swiper-bundle.min.css';
-import ProjectItems from './ProjectItems';
-SwiperCore.use([Navigation], [Pagination]);
 
 const ProjectItemsStyles = styled.div`
   .container {
     width: 100%;
     height: auto;
+    
+  
+  }
+
+  .portfolio__wrapper{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem, 35rem));
+    gap:3rem;
+    justify-content: center;
+  
+    
   }
   .swiper-button-next,
   .swiper-button-prev {
@@ -51,29 +60,32 @@ export default function Projects() {
   return (
     <ProjectItemsStyles>
       <div className='container' id='projects'>
-        <SectionTitle heading='Projects' subheading='Recent works' />
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          loop={true}
-        >
-          <div className='portfolio__container container'>
-            {projects.map((project, idx) => {
-              return (
-                <SwiperSlide key={project.id} className='swiper-arrows'>
-                  <ProjectItems
-                    title={project.name}
-                    img={project.img}
-                    desc={project.desc}
-                    link={project.link}
-                  />
-                </SwiperSlide>
-              );
-            })}
+        <SectionTitle heading='Projects' subheading='Recent works' className='sectionTitle' />
+
+        <div className='portfolio__container container'>
+          <div className='portfolio__wrapper'>
+            {projects.map((project, idx) => (
+              <PItem
+                title={project.name}
+                img={project.img}
+                desc={project.desc}
+                link={project.link} />
+            ))}
           </div>
-        </Swiper>
+
+          {/* {projects.map((project, idx) => {
+            return (
+              <ProjectItems
+                title={project.name}
+                img={project.img}
+                desc={project.desc}
+                link={project.link}
+              />
+
+            );
+          })} */}
+        </div>
+
       </div>
     </ProjectItemsStyles>
   );
