@@ -7,7 +7,7 @@ import 'swiper/swiper-bundle.min.css';
 
 const ProjectItemsStyles = styled.div`
   .container {
-    width: 100%;
+    width: 80%;
     height: auto;
     
   
