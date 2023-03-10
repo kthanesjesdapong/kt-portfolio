@@ -98,7 +98,7 @@ const AboutSectionStyles = styled.div`
 
 export default function AboutSection() {
   const ktResume =
-    'https://drive.google.com/file/d/1Rsrv0WCcEE1aHu8m1j5hcU4nhF9wD7Xp/view?usp=sharing';
+    'https://drive.google.com/file/d/1XqC7bEc_HySY133UkVipNt_Ocki83nTy/view?usp=share_link';
 
   return (
     <AboutSectionStyles>
